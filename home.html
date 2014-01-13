@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Column Five Media</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+// progress bar on top 
+ var lodedSize = 0;
+ var number_of_media = $("body img").length;
+ 
+	doProgress();
+ 
+// function for the progress bar
+ 	function doProgress() {
+		 $("img").load(function() {
+ 			lodedSize++;
+ 			var newWidthPercentage = (lodedSize / number_of_media) * 100;
+ 			animateLoader(newWidthPercentage + '%');
+ 		})
+ 	}
+ 
+//Animate the loader
+ 	function animateLoader(newWidth) {
+ 		$("#progressBar").width(newWidth);
+			 if(lodedSize>=number_of_media){
+ 				setTimeout(function(){
+					 $("#progressBar").animate({opacity:0});
+ 				},500);
+ 			}
+ 	}
+
+//Show up button when scroll down
+ 	$(window).scroll(function() {
+ 		if($(window).scrollTop() >= 110) {
+			$(".backToTop").fadeIn();	
+			}
+ 		else 
+			$(".backToTop").fadeOut(); 
+ 		});
+ 	
+ 	$('.backToTop').click(function() {
+ 		$('html, body').animate({scrollTop:0},300);
+ 	});
+
+//Show and hide search form
+	$("#search_image").click(function () {
+		$("#search_form").animate({
+   		 width:'toggle'
+   	 },"fast"); 	
+		});
+});
+
+$("#black_horizontal").attributes("width","window.innerWidth");
+
+</script>
+<link rel="stylesheet" type="text/css" href="/fiveMedia/home.css">
+
+</head>
+
+<body>
+<div id="progressBackground"></div>
+<img class="backToTop" id="backToTopRight" src="/fiveMedia/image/up_arrow.jpg" alt="back to top">
+<img class="backToTop" id="backToTopLeft" src="/fiveMedia/image/up_arrow.jpg" alt="back to top">
+<div id="progressBar" style="background"></div>
+<!-- -------------------------------------- Head Section ---------------------- -->
+	<div id="headSection">
+		<img id="icon_image" src="/fiveMedia/image/icon.jpg" alt="icon">
+  		<ul id="headButton">
+				<li class="head_button" id="home_button">HOME</li>
+				<li class="head_button" id="whatWeDo">WHAT WE DO</li>
+				<li class="head_button" id="clients">CLIENTS</li>
+				<li class="head_button" id="work">WORK</li>
+				<li class="head_button" id="about">ABOUT</li>
+				<li class="head_button" id="contact">CONTACT</li>
+				<li class="head_button" id="blog">BLOG</li>
+				<li class="head_button" id="jobs">JOBS</li>
+		</ul>
+		<div id="search">
+				<form id="search_form">
+						<input id="inputSearch" type="text" placeholder="Search" />
+				</form>
+				<img id="search_image" src="/fiveMedia/image/search_image.jpg" alt="search image"> 
+		</div>	
+	
+	</div>	
+<!-- -------------------------------------Content------------------------------------- -->	
+<div id="content">
+<table>	
+	<tr>
+	 <td>
+		<div id="left_content">    <!--  --------------Left content--------------  -->
+		
+			<!-- Slide here -->
+
+			<div><p>Slide here</p></div>
+			
+			<div id="ourWork">
+				<div class="blackLine" id="black_line1"></div>
+				<p id="whatWeDo_title">WHAT WE DO</p>
+				<p id="whatWD_content">We create powerful visual content that<br> informs and inspires your audience.</p>
+				<div class="blackLine" id="black_line2"></div>
+			</div>
+			
+			<p id="featuredWork">FEATURED WORK</p>
+			<div id="featured_image">	
+			 <div id="mainwrapper">
+			 	<div>
+							<div id="box-1" class="box">
+								<span class="rollover" ></span>
+								<img class="imgborder" alt="image 1" src="/fiveMedia/image/image1.jpg">
+								<span class="caption simple-caption">
+									<p>Simple Caption</p>
+								</span>
+							</div>					
+							<div id="box-1" class="box">
+								<span class="rollover" ></span>
+								<img class="imgborder" alt="image 2" src="/fiveMedia/image/image2.jpg">			
+								<span class="caption simple-caption">
+									<p>Simple Caption</p>
+								</span>					
+							</div>					
+							<div id="box-1" class="box">					
+								<span class="rollover" ></span>
+								<img class="imgborder" alt="image 3" src="/fiveMedia/image/image3.jpg">			
+								<span class="caption simple-caption">
+									<p>Simple Caption</p>
+								</span>
+							</div>				
+				</div>	
+				
+				<div>
+							<div id="box-1" class="box">
+								<span class="rollover" ></span>
+								<img class="imgborder" alt="image 4" src="/fiveMedia/image/image4.jpg">
+								<span class="caption simple-caption">
+									<p>Simple Caption</p>
+								</span>
+							</div>					
+							<div id="box-1" class="box">
+								<span class="rollover" ></span>
+								<img class="imgborder" alt="image 5" src="/fiveMedia/image/image5.jpg">			
+								<span class="caption simple-caption">
+									<p>Simple Caption</p>
+								</span>					
+							</div>					
+							<div id="box-1" class="box">					
+								<span class="rollover" ></span>
+								<img class="imgborder" alt="image 6" src="/fiveMedia/image/image6.jpg">			
+								<span class="caption simple-caption">
+									<p>Simple Caption</p>
+								</span>
+							</div>				
+				</div>
+				
+				<div>
+					<div id="box-1" class="box">
+						<span class="rollover" ></span>
+						<img class="imgborder" alt="image 7" src="/fiveMedia/image/image7.jpg">
+						<span class="caption simple-caption">
+							<p>Simple Caption</p>
+						</span>
+					</div>					
+					<div id="box-1" class="box">
+						<span class="rollover" ></span>
+						<img class="imgborder" alt="image 8" src="/fiveMedia/image/image8.jpg">			
+						<span class="caption simple-caption">
+							<p>Simple Caption</p>
+						</span>					
+					</div>					
+					<div id="box-1" class="box">					
+						<span class="rollover" ></span>
+						<img class="imgborder" alt="image 9" src="/fiveMedia/image/image9.jpg">			
+						<span class="caption simple-caption">
+							<p>Simple Caption</p>
+						</span>
+					</div>				
+				</div>
+				
+			 </div>
+			</div>	
+							
+			<div id="viewMore">
+				<img id="viewMoreArrow" src="/fiveMedia/image/red_arrow.jpg" alt="view more arrow">	
+				<p id="viewMoreContent">View More</p>
+			</div>
+		</div>
+	 </td>
+	 <td>			
+		<div id="right_content">  <!--  --------------Right content--------------  -->
+			<iframe src="//player.vimeo.com/video/75924498" width="385" height="270" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			
+			<div id="approach_and_book">
+				<table>
+					<tr>	
+						<td>
+							<div id="approach">
+								<div class="blackLine" id="black_line3"></div>
+								<p id="ourApproach_Book">OUR <br>APPROACH</p>
+								<p id="approach_content">At Column<br> Five, we<br> apply our<br> unique <br>framework<br> for content<br>
+					 			strategy to<br> every<br> project we<br> undertake.</p>
+							</div>
+							<div id="readMore">
+								<img id="readMoreArrow" src="/fiveMedia/image/red_arrow.jpg" alt="read more arrow">	
+								<p id="readMoreContent">Read More</p>	
+							</div>	
+							<div id="hiring">
+								<div class="blackLine" id="black_line5"></div>
+								<p id="weAreHiring">WE'RE HIRING</p>
+								<img id="hiringImage" src="/fiveMedia/image/hiring.gif" alt="We are hiring">						
+							</div>		
+						</td>
+						<td>						
+							<div id="book">
+								<div class="blackLine" id="black_line4"></div>
+								<p id="ourApproach_Book">OUR BOOK</p>
+								<p id="book_content">Check <br>out<br> <i>Infographics:<br> The <br>Power of<br> Visual<br>
+					 			Storytelling</i> <br>to learn <br>more <br>about<br> visual <br>communication.</p>
+							</div>
+							<div id="learnMore">
+								<img id="learnMoreArrow" src="/fiveMedia/image/red_arrow.jpg" alt="learn more arrow">	
+								<p id="learnMoreContent">Learn More</p>
+							</div>
+							<div id="infograp">
+								<img id="infographics" src="/fiveMedia/image/infographics.png" alt="infographics">
+							</div>								
+						</td>	
+					</tr>
+				</table>	
+			</div>			
+					
+		</div>
+	</td>	
+	</tr>			
+</table>		
+</div>
+	
+<!-- -----------------------------------------Footer---------------------------------------- -->	
+	<div id="black_horizontal"></div>	
+	<div id="footer"> 
+		
+			<div id="left_footer_icon">
+				<img id="footer_icon" src="/fiveMedia/image/footer_icon.jpg" alt="footer icon">
+			</div>			
+			<div id="cali_and_ny">
+				<div id="california">
+					<p id="cali_title">CALIFORNIA</p>
+					<div id="black_line6"></div>
+					<p class="footer_line_height">1611 Babcock Street <br>Newport Beach, CA 92663</p>
+					<p class="footer_line_height">T. 949.614.0759 <br>info@columnfivemedia.com</p>				
+				</div>
+				<div id="newYork">
+					<p id="ny_title">NEW YORK</p>
+				   <div id="black_line6"></div>
+				   <p class="footer_line_height">20 Jay Street, Suite 634 <br>Brooklyn, NY 11201</p>
+				</div>
+			</div>				
+			<div id="social">		
+				
+					<abbr title="Twitter"> 
+						<a href="https://twitter.com/columnfive" target="_blank">
+							<span class="twitter_rollover" ></span> 
+						</a>
+							<img class="socialImage" src="/fiveMedia/image/twitter.jpg" alt="twitter">
+					</abbr>					
+					<abbr title="Dibbble">
+						<a href="http://dribbble.com/columnfive" target="_blank">
+							<span class="dribbble_rollover" ></span> 
+						</a>
+							<img class="socialImage" src="/fiveMedia/image/dribbble.jpg" alt="dibbble">
+					</abbr>
+					<abbr title="Facebook">
+						<a href="https://www.facebook.com/columnfivemedia" target="_blank">						
+							<span class="facebook_rollover" ></span>					
+						</a>	
+							<img class="socialImage" src="/fiveMedia/image/facebook.jpg" alt="facebook">	
+					</abbr>
+					<abbr title="Printerest">
+						<a href="https://www.pinterest.com/columnfive/" target="_blank">
+							<span class="printerest_rollover" ></span>		
+						</a>					
+							<img class="socialImage" src="/fiveMedia/image/printerest.jpg" alt="printerest">	
+					</abbr>
+					<abbr title="Instagram">
+						<a href="http://instagram.com/columnfive" target="_blank">
+							<span class="instagram_rollover" ></span>
+						</a>	
+							<img class="socialImage" src="/fiveMedia/image/instagram.jpg" alt="instagram">	
+					</abbr>
+					<abbr title="Google Plus">
+						<a href="https://plus.google.com/114456014360021971802/posts" target="_blank">
+							<span class="googlePlus_rollover" ></span>
+						</a>	
+							<img class="socialImage" src="/fiveMedia/image/googlePlus.jpg" alt="google +">
+					</abbr>
+			</div>									
+			<div id="right_footer_icon">
+					<img src="/fiveMedia/image/right_footer_image.jpg" alt="Inc 500">
+					<p id="right_footer_title">&#169; 2013 Column Five.</p>
+			</div>						
+	</div>	
+	
+		
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
