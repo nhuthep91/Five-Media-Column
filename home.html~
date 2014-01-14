@@ -6,6 +6,10 @@
 <title>Column Five Media</title>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/fiveMedia/bootstrap/css/bootstrap.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="/fiveMedia/bootstrap/js/bootstrap.js"></script>
 
 <script>
 $(document).ready(function(){
@@ -52,7 +56,7 @@ $(document).ready(function(){
 		$("#search_form").animate({
    		 width:'toggle'
    	 },"fast"); 	
-		});
+	});
 });
 
 $("#black_horizontal").attributes("width","window.innerWidth");
@@ -64,10 +68,15 @@ $("#black_horizontal").attributes("width","window.innerWidth");
 
 <body>
 <div id="progressBackground"></div>
+<span class="backToTop" id="upArrowRight"> </span>
 <img class="backToTop" id="backToTopRight" src="/fiveMedia/image/up_arrow.jpg" alt="back to top">
+
+<span class="backToTop" id="upArrowLeft"> </span>
 <img class="backToTop" id="backToTopLeft" src="/fiveMedia/image/up_arrow.jpg" alt="back to top">
 <div id="progressBar" style="background"></div>
+
 <!-- -------------------------------------- Head Section ---------------------- -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:white;">	
 	<div id="headSection">
 		<img id="icon_image" src="/fiveMedia/image/icon.jpg" alt="icon">
   		<ul id="headButton">
@@ -87,7 +96,8 @@ $("#black_horizontal").attributes("width","window.innerWidth");
 				<img id="search_image" src="/fiveMedia/image/search_image.jpg" alt="search image"> 
 		</div>	
 	
-	</div>	
+	</div>
+</nav>		
 <!-- -------------------------------------Content------------------------------------- -->	
 <div id="content">
 <table>	
@@ -95,10 +105,52 @@ $("#black_horizontal").attributes("width","window.innerWidth");
 	 <td>
 		<div id="left_content">    <!--  --------------Left content--------------  -->
 		
-			<!-- Slide here -->
-
-			<div><p>Slide here</p></div>
+<!-- ---------------------------Slide here------------------------- -->
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			
+			<!-- Wrapper for slides -->
+			 <div class="carousel-inner">
+			 
+   			<div class="item active">
+      			<img id="slideImage" src="/fiveMedia/image/slide1.jpg" alt="slide 1">
+        			<div id="slide_caption" class="carousel-caption">
+						<p id="slide_caption_title">Slide 1</p>  
+						<p>Nhu Thep</p>    			
+      			</div>
+  			  	</div>
+      		<div class="item">
+  			    	<img id="slideImage" src="/fiveMedia/image/slide2.jpg" alt="slide 2">
+      			<div id="slide_caption" class="carousel-caption">
+        				<p>Slide 2</p>
+        				<p>Nhu Thep</p>
+      			</div>
+  			  	</div>
+  			  	<div class="item">
+  			    	<img id="slideImage" src="/fiveMedia/image/slide3.png" alt="slide 3">
+      			<div id="slide_caption" class="carousel-caption">
+        				<p>Slide 3</p>
+        				<p>Nhu Thep</p>
+      			</div>
+  			  	</div>
+  			  	<div class="item">
+  			    	<img id="slideImage" src="/fiveMedia/image/slide4.jpg" alt="slide 4">
+      			<div id="slide_caption" class="carousel-caption">
+        				<p>Slide 4</p>
+        				<p>Nhu Thep</p>
+      			</div>
+  			  	</div> 
+  			  	
+  			</div>
+
+ 		 <!-- Controls -->
+ 	 	<a class="left carousel-control" data-slide="prev">
+ 	   	<span class="glyphicon glyphicon-chevron-left"></span>
+	  	</a>
+	 	<a class="right carousel-control"  data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+  		</a>
+	</div>
+<!-- ----------------------------------Our work----------------------- -->
 			<div id="ourWork">
 				<div class="blackLine" id="black_line1"></div>
 				<p id="whatWeDo_title">WHAT WE DO</p>
@@ -108,7 +160,7 @@ $("#black_horizontal").attributes("width","window.innerWidth");
 			
 			<p id="featuredWork">FEATURED WORK</p>
 			<div id="featured_image">	
-			 <div id="mainwrapper">
+				<div id="mainwrapper">
 			 		<div>
 							<div id="box-1" class="box">
 								<span class="rollover" ></span>
@@ -131,9 +183,9 @@ $("#black_horizontal").attributes("width","window.innerWidth");
 									<p>Simple Caption</p>
 								</span>
 							</div>				
-				</div>
+					</div>	
 				
-				<div>
+					<div>
 							<div id="box-1" class="box">
 								<span class="rollover" ></span>
 								<img class="imgborder" alt="image 4" src="/fiveMedia/image/image4.jpg">
@@ -153,45 +205,46 @@ $("#black_horizontal").attributes("width","window.innerWidth");
 								<img class="imgborder" alt="image 6" src="/fiveMedia/image/image6.jpg">			
 								<span class="caption simple-caption">
 									<p>Simple Caption</p>
-							</span>
-					</div>				
-				</div>
+								</span>
+							</div>				
+					</div>
 				
-				<div>
-					<div id="box-1" class="box">
-						<span class="rollover" ></span>
-						<img class="imgborder" alt="image 7" src="/fiveMedia/image/image7.jpg">
-						<span class="caption simple-caption">
-							<p>Simple Caption</p>
-						</span>
-					</div>					
-					<div id="box-1" class="box">
-						<span class="rollover" ></span>
-						<img class="imgborder" alt="image 8" src="/fiveMedia/image/image8.jpg">			
-						<span class="caption simple-caption">
-							<p>Simple Caption</p>
-						</span>					
-					</div>					
-					<div id="box-1" class="box">					
-						<span class="rollover" ></span>
-						<img class="imgborder" alt="image 9" src="/fiveMedia/image/image9.jpg">			
-						<span class="caption simple-caption">
-							<p>Simple Caption</p>
-						</span>
-					</div>				
-				</div>
+					<div>
+							<div id="box-1" class="box">
+								<span class="rollover" ></span>
+								<img class="imgborder" alt="image 7" src="/fiveMedia/image/image7.jpg">
+								<span class="caption simple-caption">
+									<p>Simple Caption</p>
+								</span>
+							</div>					
+							<div id="box-1" class="box">
+								<span class="rollover" ></span>
+								<img class="imgborder" alt="image 8" src="/fiveMedia/image/image8.jpg">			
+								<span class="caption simple-caption">
+									<p>Simple Caption</p>
+								</span>					
+							</div>					
+							<div id="box-1" class="box">					
+								<span class="rollover" ></span>
+								<img class="imgborder" alt="image 9" src="/fiveMedia/image/image9.jpg">			
+								<span class="caption simple-caption">
+									<p>Simple Caption</p>
+								</span>
+							</div>				
+					</div>
 				
-			 </div>
+				</div>
 			</div>	
 							
 			<div id="viewMore">
 				<img id="viewMoreArrow" src="/fiveMedia/image/red_arrow.jpg" alt="view more arrow">	
 				<p id="viewMoreContent">View More</p>
 			</div>
+			<br> <br> <br> <br>
 		</div>
 	 </td>
 	 <td>			
-		<div id="right_content">  <!--  --------------Right content--------------  -->
+		<div id="right_content">  <!--  ---------------------Right content--------------------------  -->
 			<iframe src="//player.vimeo.com/video/75924498" width="385" height="270" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			
 			<div id="approach_and_book">
@@ -260,51 +313,57 @@ $("#black_horizontal").attributes("width","window.innerWidth");
 				</div>
 			</div>				
 			<div id="social">		
-				
 					<abbr title="Twitter"> 
 						<a href="https://twitter.com/columnfive" target="_blank">
 							<span class="twitter_rollover" ></span> 
 						</a>
-							<img class="socialImage" src="/fiveMedia/image/twitter.jpg" alt="twitter">
-					</abbr>					
+					</abbr>	
+					<img class="socialImage" src="/fiveMedia/image/twitter.jpg" alt="twitter">
+								
 					<abbr title="Dibbble">
 						<a href="http://dribbble.com/columnfive" target="_blank">
 							<span class="dribbble_rollover" ></span> 
-						</a>
-							<img class="socialImage" src="/fiveMedia/image/dribbble.jpg" alt="dibbble">
+						</a> 
 					</abbr>
+					<img class="socialImage" src="/fiveMedia/image/dribbble.jpg" alt="dibbble">
+					
 					<abbr title="Facebook">
 						<a href="https://www.facebook.com/columnfivemedia" target="_blank">						
 							<span class="facebook_rollover" ></span>					
 						</a>	
-							<img class="socialImage" src="/fiveMedia/image/facebook.jpg" alt="facebook">	
-					</abbr>
+					</abbr>	
+					<img class="socialImage" src="/fiveMedia/image/facebook.jpg" alt="facebook">	
+					
 					<abbr title="Printerest">
 						<a href="https://www.pinterest.com/columnfive/" target="_blank">
 							<span class="printerest_rollover" ></span>		
-						</a>					
-							<img class="socialImage" src="/fiveMedia/image/printerest.jpg" alt="printerest">	
-					</abbr>
+						</a>	
+					</abbr>					
+					<img class="socialImage" src="/fiveMedia/image/printerest.jpg" alt="printerest">	
+					
 					<abbr title="Instagram">
 						<a href="http://instagram.com/columnfive" target="_blank">
 							<span class="instagram_rollover" ></span>
 						</a>	
-							<img class="socialImage" src="/fiveMedia/image/instagram.jpg" alt="instagram">	
-					</abbr>
+					</abbr>	
+					<img class="socialImage" src="/fiveMedia/image/instagram.jpg" alt="instagram">	
+					
 					<abbr title="Google Plus">
 						<a href="https://plus.google.com/114456014360021971802/posts" target="_blank">
 							<span class="googlePlus_rollover" ></span>
 						</a>	
-							<img class="socialImage" src="/fiveMedia/image/googlePlus.jpg" alt="google +">
-					</abbr>
+					</abbr>	
+					<img class="socialImage" src="/fiveMedia/image/googlePlus.jpg" alt="google +">
+					
 			</div>									
 			<div id="right_footer_icon">
 					<img src="/fiveMedia/image/right_footer_image.jpg" alt="Inc 500">
 					<p id="right_footer_title">&#169; 2013 Column Five.</p>
-			</div>						
+					<br> <br>
+			</div>		
+						
 	</div>	
-	
-		
+
 </body>
 </html>
 
