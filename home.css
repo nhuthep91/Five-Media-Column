@@ -72,11 +72,11 @@
 	#icon_image{ width: 220px; height: 100px; cursor: pointer; vertical-align: top; padding-top: 30px;
 			float: left; padding-left: 30px;
 	}
-	#headButton{   list-style-type:none; float: left; margin-top: 10px;
+	#headButton{   list-style-type:none; float: left; margin-top: 10px; 
 	}
 	li.head_button:hover{ color: #FF1919;
 		}
-	li.head_button{ color: black; font-family: sans-serif; font-weight: bold;  border-width: 0; background-color: white;
+	li.head_button { color: black; font-family: sans-serif; font-weight: bold;  border-width: 0; background-color: white;
 		 font-size: 12px; cursor: pointer; padding-left: 20px; vertical-align: top; padding-top: 30px; float: left; 
 		}
 	#home_button{ padding-left: 215px; 
@@ -115,8 +115,6 @@
 	#content{ padding-top: 150px;
 	}
 	#left_content{ float: left; width: 860px;
-	}
-	#slide{
 	}
 	#right_content{ float: left;
 	}
@@ -447,9 +445,45 @@
 	}
 
 
+#whatWeDo > a{ text-decoration: none;
+}
+#about > a{ text-decoration: none;
+}
+.sub-menu > li > a{ text-decoration: none; font-size: 16px; color: black;
+}
+.sub-menu > li > a:hover{ color:  #FF1919;
+}
+.sub-menu > li > a:link{ text-decoration: none;
+}
+.main-menu > li {
+    display: inline-block;
+}
 
+.main-menu > li.selected {
+    background-color: white;
+}
 
+.main-menu > li > div { /* nested div (containing the sub nav) will be hidden by default */
+    margin-left: -40px; margin-top: 15px;
+    width: 450px;
+    position: absolute;
+    background-color: white;
+    display:none;
+}
 
+.main-menu > li.selected > div {
+    display: inline;
+}
+
+.sub-menu {
+    list-style: none; 
+    margin: 0 auto; 
+}
+
+.sub-menu > li { 
+    display: inline-block;
+    margin-right: 2em;
+}
 
 
 

@@ -57,6 +57,24 @@ $(document).ready(function(){
    		 width:'toggle'
    	 },"fast"); 	
 	});
+
+//Sub menu
+// Make the first class selected
+$(".main-menu > li:first").addClass("selected");
+
+// Switch the selected class
+$(".main-menu > li").hover(function() {
+    $(".selected").removeClass("selected");
+    $(this).addClass("selected");
+});
+
+// Disable menu links
+$(".main-menu > li > a").hover(function(e) {
+$(this).addClass("selected");
+ $(".selected").removeClass("selected");
+    e.preventDefault();
+});	
+	
 });
 
 $("#black_horizontal").attributes("width","window.innerWidth");
@@ -67,6 +85,8 @@ $("#black_horizontal").attributes("width","window.innerWidth");
 </head>
 
 <body>
+
+<!-- ---------------Up to top button---------------------- -->
 <div id="progressBackground"></div>
 <span class="backToTop" id="upArrowRight"> </span>
 <img class="backToTop" id="backToTopRight" src="/fiveMedia/image/up_arrow.jpg" alt="back to top">
@@ -79,12 +99,36 @@ $("#black_horizontal").attributes("width","window.innerWidth");
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:white;">	
 	<div id="headSection">
 		<img id="icon_image" src="/fiveMedia/image/icon.jpg" alt="icon">
-  		<ul id="headButton">
+  		<ul id="headButton" class="main-menu">
 				<li class="head_button" id="home_button">HOME</li>
-				<li class="head_button" id="whatWeDo">WHAT WE DO</li>
+				<li class="head_button" id="whatWeDo">
+					<a href="#">WHAT WE DO</a>
+					<div>
+               	 <ul class="sub-menu">
+                  	<li id="whatWedo_sub1">
+                     	   <a href="#">Capabilities</a>
+                    	</li>
+                    	<li id="whatWeDo_sub2">
+                     	   <a href="#">Our Approach</a>
+                    	</li>
+                	</ul>
+            	</div>
+				</li>
 				<li class="head_button" id="clients">CLIENTS</li>
 				<li class="head_button" id="work">WORK</li>
-				<li class="head_button" id="about">ABOUT</li>
+				<li class="head_button" id="about">
+					<a href="#">ABOUT</a>
+					<div>
+               	 <ul class="sub-menu">
+                  	<li id="about_sub1">
+                     	   <a href="#">Mission</a>
+                    	</li>
+                    	<li id="about_sub2">
+                     	   <a href="#">People</a>
+                    	</li>
+                	</ul>
+            	</div>					
+				</li>
 				<li class="head_button" id="contact">CONTACT</li>
 				<li class="head_button" id="blog">BLOG</li>
 				<li class="head_button" id="jobs">JOBS</li>
@@ -98,6 +142,7 @@ $("#black_horizontal").attributes("width","window.innerWidth");
 	
 	</div>
 </nav>		
+
 <!-- -------------------------------------Content------------------------------------- -->	
 <div id="content">
 <table>	
