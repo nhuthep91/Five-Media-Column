@@ -64,16 +64,16 @@ $(".main-menu > li:first").addClass("selected");
 
 // Switch the selected class
 $(".main-menu > li").hover(function() {
-    $(".selected").removeClass("selected");
+  $(".selected").removeClass("selected");
     $(this).addClass("selected");
 });
 
 // Disable menu links
 $(".main-menu > li > a").hover(function(e) {
-$(this).addClass("selected");
+ $(this).addClass("selected");
  $(".selected").removeClass("selected");
     e.preventDefault();
-});	
+});
 	
 });
 
